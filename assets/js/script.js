@@ -1,15 +1,36 @@
 // Dark/Light mode toggle
 
 const checkbox = document.getElementById('checkbox');
+const sunIcon = document.querySelector('.fa-sun');
+const moonIcon = document.querySelector('.fa-moon');
 
-checkbox.addEventListener('change', () => {
-    document.body.classList.toggle('dark-mode');
-    // Save preference to localStorage
-    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+// Function to toggle dark mode
+function setDarkMode(isDark) {
+    document.body.classList.toggle('dark-mode', isDark);
+}
+
+// Load saved preference
+const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+setDarkMode(savedDarkMode);
+checkbox.checked = savedDarkMode;
+
+// Preview handlers
+sunIcon.addEventListener('mouseenter', () => {
+    setDarkMode(false);
 });
 
-// Check for saved preference
-if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark-mode');
-    checkbox.checked = true;
-}
+moonIcon.addEventListener('mouseenter', () => {
+    setDarkMode(true);
+});
+
+// Restore saved theme when mouse leaves
+const themeSwitch = document.querySelector('.theme-switch');
+themeSwitch.addEventListener('mouseleave', () => {
+    setDarkMode(localStorage.getItem('darkMode') === 'true');
+});
+
+// Actually change the theme when clicked
+checkbox.addEventListener('change', () => {
+    setDarkMode(checkbox.checked);
+    localStorage.setItem('darkMode', checkbox.checked);
+});
