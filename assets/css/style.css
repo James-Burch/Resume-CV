@@ -44,6 +44,15 @@
     transition: all 0.3s ease;
 }
 
+/* Add a transition effects for dark/light mode change */
+body {
+    transition: background-color 1.2s ease, color 1.5s ease;
+}
+
+.navbar {
+    transition: background-color 1.2s ease !important;
+}
+
 /* ------------------ Dark mode style */
 
 body.dark-mode {
