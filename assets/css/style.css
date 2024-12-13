@@ -1,4 +1,4 @@
-/* ------------------ Dark/Light Navbar Style */
+/* ------------------ Dark/Light Mode Navbar Style */
 
 .theme-switch-wrapper {
     display: flex;
@@ -25,6 +25,8 @@
     top: 50%;
     transform: translateY(-50%);
     color: #f1c40f;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
 }
 
 .fa-moon {
@@ -33,6 +35,14 @@
     top: 50%;
     transform: translateY(-50%);
     color: #2c3e50;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover effects for icons */
+.fa-sun:hover, .fa-moon:hover {
+    font-size: 1.8rem;
+    cursor: pointer;
 }
 
 /* ------------------ Dark mode style */
