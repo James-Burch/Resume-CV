@@ -1,36 +1,33 @@
 // Dark/Light mode toggle
 
 const checkbox = document.getElementById('checkbox');
-const sunIcon = document.querySelector('.fa-sun');
-const moonIcon = document.querySelector('.fa-moon');
 
-// Function to toggle dark mode
-function setDarkMode(isDark) {
-    document.body.classList.toggle('dark-mode', isDark);
+checkbox.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode');
+    // Save preference to localStorage
+    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+});
+
+// Check for saved preference
+if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark-mode');
+    checkbox.checked = true;
 }
 
-// Load saved preference
-const savedDarkMode = localStorage.getItem('darkMode') === 'true';
-setDarkMode(savedDarkMode);
-checkbox.checked = savedDarkMode;
+// Make sure navbar closes on mobile
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all navbar links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
 
-// Preview handlers
-sunIcon.addEventListener('mouseenter', () => {
-    setDarkMode(false);
-});
-
-moonIcon.addEventListener('mouseenter', () => {
-    setDarkMode(true);
-});
-
-// Restore saved theme when mouse leaves
-const themeSwitch = document.querySelector('.theme-switch');
-themeSwitch.addEventListener('mouseleave', () => {
-    setDarkMode(localStorage.getItem('darkMode') === 'true');
-});
-
-// Actually change the theme when clicked
-checkbox.addEventListener('change', () => {
-    setDarkMode(checkbox.checked);
-    localStorage.setItem('darkMode', checkbox.checked);
+    // Add click event to all nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Check if navbar is expanded (mobile view)
+            if (navbarCollapse.classList.contains('show')) {
+                navbarToggler.click(); // Simulate click on navbar toggler
+            }
+        });
+    });
 });

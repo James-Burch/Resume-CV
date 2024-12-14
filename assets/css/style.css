@@ -3,6 +3,7 @@
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .theme-switch {
@@ -70,4 +71,23 @@ body.dark-mode .navbar-light .navbar-nav .nav-link {
 
 body.dark-mode .navbar-brand {
     color: #fff;
+}
+
+
+/* -------------------- Navbar */
+
+.navbar-nav {
+    text-align: center;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+}
+
+/* Media Query for screens larger than 768px */
+@media screen and (min-width: 768px) {
+    .theme-switch-wrapper {
+        right: 20px;
+        position: fixed;
+    }
 }
