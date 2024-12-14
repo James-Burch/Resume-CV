@@ -110,6 +110,15 @@ body.dark-mode .white {
     text-shadow: #333;
 }
 
+/* ---------------------------- Home/Introduction Section */
+
+.title-name {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 7px;
+}
+
+
 /* Media Query for screens larger than 768px */
 @media screen and (min-width: 768px) {
     .theme-switch-wrapper {
