@@ -43,6 +43,14 @@
     font-size: 1.8rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    z-index: 1031; /* Ensure icons stay above other elements when hovering */
+}
+
+/* Ensure the icons remain clickable in fixed position */
+.theme-switch-wrapper .fa-sun,
+.theme-switch-wrapper .fa-moon {
+    pointer-events: auto;
+    z-index: 1031;
 }
 
 /* Add a transition effects for dark/light mode change */
@@ -73,6 +81,13 @@ body.dark-mode .navbar-brand {
     color: #fff;
 }
 
+body.dark-mode .navbar-toggler {
+    border-color: #fff !important;
+}
+
+body.dark-mode .white {
+    color: #fff;
+}
 
 /* -------------------- Navbar */
 
@@ -80,8 +95,19 @@ body.dark-mode .navbar-brand {
     text-align: center;
 }
 
+.nav-item {
+    opacity: 80%;
+}
+
 .nav-item:hover {
     cursor: pointer;
+    opacity: 100%;
+    transition: all 1.0s ease;
+    font-weight: bold;
+}
+
+.h1-shadow {
+    text-shadow: #333;
 }
 
 /* Media Query for screens larger than 768px */
