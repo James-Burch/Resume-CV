@@ -1,6 +1,6 @@
 // Dark/Light mode toggle
 
-const checkbox = document.getElementById('checkbox');
+const checkbox = document.getElementById('checkboxInput');
 
 checkbox.addEventListener('change', () => {
     document.body.classList.toggle('dark-mode');
