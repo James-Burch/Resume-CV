@@ -1,57 +1,54 @@
-/* ------------------ Dark/Light Mode Navbar Style */
-
+/* ------------------ Dark/Light Mode Navbar Toggle */
+/* To hide the checkbox */
+#checkboxInput {
+    display: none;
+  }
+  
+  .toggleSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50px;
+    height: 30px;
+    background-color: rgb(82, 82, 82);
+    border-radius: 20px;
+    cursor: pointer;
+    transition-duration: .2s;
+  }
+  
+  .toggleSwitch::after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    left: 5px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition-duration: .2s;
+    box-shadow: 5px 2px 7px rgba(8, 8, 8, 0.26);
+    border: 5px solid white;
+  }
+  
+  #checkboxInput:checked+.toggleSwitch::after {
+    transform: translateX(100%);
+    transition-duration: .2s;
+    background-color: white;
+  }
+  /* Switch background change */
+  #checkboxInput:checked+.toggleSwitch {
+    background-color: rgb(148, 118, 255);
+    transition-duration: .2s;
+  }
+  
+/* Ensure the icons remain clickable in fixed position */
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.theme-switch {
-    display: inline-block;
-    position: relative;
-    width: 60px;
-    height: 34px;
-    cursor: pointer;
-}
-
-.theme-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.fa-sun {
-    position: absolute;
-    left: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #f1c40f;
-    font-size: 1.5rem;
-}
-
-.fa-moon {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #2c3e50;
-    font-size: 1.5rem;
-}
-
-/* Hover effects for icons */
-.fa-sun:hover, .fa-moon:hover {
-    font-size: 1.8rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 1031; /* Ensure icons stay above other elements when hovering */
-}
-
-/* Ensure the icons remain clickable in fixed position */
-.theme-switch-wrapper .fa-sun,
-.theme-switch-wrapper .fa-moon {
-    pointer-events: auto;
     z-index: 1031;
 }
+
 
 /* Add a transition effects for dark/light mode change */
 body {
