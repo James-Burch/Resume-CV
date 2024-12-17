@@ -119,6 +119,10 @@ body.dark-mode .white {
 
 /* ---------------------------- Portfolio Projects Display Section */
 
+.portfolio-text {
+    text-align: center;
+}
+
 .card-pp {
     height: 150px;
     padding: 0.5rem;
