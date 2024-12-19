@@ -117,6 +117,15 @@ body.dark-mode .white {
     letter-spacing: 7px;
 }
 
+.profile-img {
+    background-image: url('assets/images/imageofme.HEIC');
+    background-color: #222;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}
+
 /* ---------------------------- Portfolio Projects Display Section */
 
 .portfolio-text {
@@ -160,6 +169,12 @@ body.dark-mode .white {
 
 /* Media Query for screens larger than 768px */
 @media screen and (min-width: 768px) {
+    .intro-section {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 992px) {
     .theme-switch-wrapper {
         right: 20px;
         position: fixed;
