@@ -1,5 +1,8 @@
 /* ---------------------------------------------- General Styles */
 
+body {
+    font-family: monospace;
+}
 /* Text Center */
 .txt-ctr {
     text-align: center;
@@ -157,6 +160,28 @@ body.dark-mode .white {
     font-size: larger;
 }
 
+/* ----------------------------------------------  About Me Section */
+
+.about-section {
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #444;
+    padding: 20px 5px;
+}
+
+.card-ab {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 20px 5px 10px;
+    max-width: 500px;
+}
+
+.card-ab p {
+    text-align: left;
+    line-height: 1.8;
+}
 /* ----------------------------------------------  Portfolio Projects Display Section */
 
 .portfolio-text {
