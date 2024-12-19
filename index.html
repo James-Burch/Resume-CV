@@ -39,7 +39,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                     <li class="nav-item">
                         <!-- Dark/Light mode selector -->
-                        <div class="theme-switch-wrapper">
+                        <div class="theme-switch-wrapper" aria-label="Toggle switch for Light and Dark mode">
                             <input type="checkbox" id="checkboxInput">
                             <label for="checkboxInput" class="toggleSwitch">
                             </label>
@@ -57,11 +57,19 @@
                     <h2 class="title-name">I'M <br> JAMES <br> BURCH</h2>
                 </div>
                 <div>
-                    <h3>Full Stack Software Developer</h3>
+                    <h3 class="txt-ctr p-3 job-title">Full Stack Software <br> Developer/Engineer</h3>
                 </div>
             </div>
             <div class="col-md-6 d-flex justify-content-center align-items-center">
-                <div class="profile-img">Profile Image Here</div>
+                <div class="profile-img" aria-label="Profile Image of Me"></div>
+            </div>
+            <div class="intro-socials">
+                <ul class="social-icon">
+                    <li><a href="https://github.com/James-Burch" rel="noopener" target="_blank"
+                            aria-label="Link to my github profile"><i class="fa-brands fa-github fa-xl icon"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/james-burch-16a206227/" rel="noopener" target="_blank"
+                            aria-label="Link to my linked in profile"><i class="fa-brands fa-linkedin fa-xl icon"></i></a></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -119,13 +127,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
     <!-- Link to Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

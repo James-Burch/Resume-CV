@@ -1,4 +1,23 @@
-/* ------------------ Dark/Light Mode Navbar Toggle */
+/* ---------------------------------------------- General Styles */
+
+/* Text Center */
+.txt-ctr {
+    text-align: center;
+}
+
+/* Font Awesome Icons */
+.icon {
+    color: #fff;
+    opacity: 80%;
+}
+
+.icon:hover {
+    transform: scale(1.05);
+    transition: 1.0s ease;
+    opacity: 100%;
+}
+
+/* ---------------------------------------------- Dark/Light Mode Navbar Toggle */
 /* CSS for light/dark toggle taken from UIVerse.io */
 /* To hide the checkbox */
 #checkboxInput {
@@ -61,7 +80,7 @@ body {
     transition: background-color 1.2s ease !important;
 }
 
-/* ------------------ Dark mode style */
+/* ----------------------------------------------- Dark mode style */
 
 body.dark-mode {
     background-color: #333;
@@ -88,7 +107,7 @@ body.dark-mode .white {
     color: #fff;
 }
 
-/* -------------------- Navbar */
+/* ---------------------------------------------- Navbar */
 
 .navbar-nav {
     text-align: center;
@@ -109,7 +128,7 @@ body.dark-mode .white {
     text-shadow: #333;
 }
 
-/* ---------------------------- Home/Introduction Section */
+/* ---------------------------------------------- Home/Introduction Section */
 
 .title-name {
     font-size: 3rem;
@@ -126,7 +145,19 @@ body.dark-mode .white {
     margin: 0 auto;
 }
 
-/* ---------------------------- Portfolio Projects Display Section */
+.social-icon {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.intro-socials {
+    padding: 10px;
+    font-size: larger;
+}
+
+/* ----------------------------------------------  Portfolio Projects Display Section */
 
 .portfolio-text {
     text-align: center;
@@ -167,12 +198,18 @@ body.dark-mode .white {
     position: relative;
 }
 
-/* Media Query for screens larger than 768px */
+/* ---------------------------------------------- Media Query for screens larger than 768px */
 @media screen and (min-width: 768px) {
     .intro-section {
         margin-top: 20px;
     }
+    .job-title {
+        padding: 0;
+        text-align: start;
+    }
 }
+
+/* ---------------------------------------------- Media Query for screens larger than 992px */
 
 @media screen and (min-width: 992px) {
     .theme-switch-wrapper {
