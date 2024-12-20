@@ -189,6 +189,10 @@ body.dark-mode .white {
     min-height: 100vh;
 }
 
+.progression-section h3 {
+    font-size: larger;
+}
+
 .skill {
     padding: 10px 10px;
     max-width: 600px;
