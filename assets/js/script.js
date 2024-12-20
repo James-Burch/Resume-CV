@@ -31,3 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Get the confidence % and pass into width for progress bar CSS
+document.addEventListener('DOMContentLoaded', () => {
+    const progressBars = document.querySelectorAll('.progress-fill');
+
+    progressBars.forEach(bar => {
+        const percent = bar.getAttribute('data-percent'); // Gets the percentage
+        bar.style.width = percent + '%'; // Set the width dynamically
+        bar.querySelector('.progress-text').textContent = percent + '%'; // Update the % text inside the progress bar
+    });
+});
